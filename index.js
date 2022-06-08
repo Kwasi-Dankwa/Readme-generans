@@ -50,31 +50,25 @@ const questions = [{
     message: "What is your email address?",
     name: "email"
 
-}, {
-    type: "input",
-    message: "What is your email address?",
-    name: "email"
 },
+
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, "utf8", function (err){
-        if (err) {
-            throw err;
-        }
-        console.log("Readme file written successfully");
-    });
+    console.log("Creating README.");
+    fs.writeFileSync(fileName, data);
+    console.log("README successfully created.");
 
- }
+}
 
 // TODO: Create a function to initialize app
-function init() { 
+function init() {
     inquirer.prompt(questions)
-    .then(answers => {
-        const markdownText = generateMarkdown(answers);
-        writeToFile("README.md", markdownText);
-    });
+        .then(answers => {
+            const markdownText = generateMarkdown(answers);
+            writeToFile("README.md", markdownText);
+        });
 }
 
 // Function call to initialize app

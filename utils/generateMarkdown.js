@@ -14,6 +14,12 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+}
+
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) { 
   const year = new Date().getFullYear();
   return (license === "Unlicense") ?
     `    This is free and unencumbered software released into the public domain.
@@ -79,12 +85,7 @@ function renderLicenseLink(license) {
       Copyright ${year} ${name}` :
         (license === "None") ?
           `` : "";
-}
-
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) { }
+};
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
