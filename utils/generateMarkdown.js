@@ -14,6 +14,7 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
+  pass
 }
 
 
@@ -46,7 +47,7 @@ function renderLicenseSection(license) {
     
     For more information, please refer to <https://unlicense.org>
     
-    Copyright (c) ${year} ${name}` :
+    Copyright (c) ${year} ${developer}` :
 
     (license === "MIT") ?
       `    Permission is hereby granted, free of charge, to any person obtaining
@@ -68,7 +69,7 @@ function renderLicenseSection(license) {
       OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
       WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
       
-      Copyright (c) ${year} ${name}` :
+      Copyright (c) ${year}` :
       (license === "Apache") ?
         `    Licensed under the Apache License, Version 2.0 (the "License");
       you may not use this file except in compliance with the License.
@@ -82,7 +83,7 @@ function renderLicenseSection(license) {
       See the License for the specific language governing permissions and
       limitations under the License.
       
-      Copyright ${year} ${name}` :
+      Copyright ${year}` :
         (license === "None") ?
           `` : "";
 };
