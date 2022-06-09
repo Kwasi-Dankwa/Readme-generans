@@ -122,10 +122,10 @@ function generateMarkdown(data) {
   # Questions
   
   Issues or questions? Email the developer(s) [here](mailto:${data.email}).
-  Created by ${data.name}. See more work at their [Github profile](https://github.com/${data.githubUsername}).
+  Created by ${data.developer}. See more work at their [Github profile](https://github.com/${data.githubUsername}).
   # License
   ${renderLicenseBadge(data.license)}
-  ${renderLicenseSection(data.license, data.name)}`;
+  ${renderLicenseSection(data.license, data.developer)}`;
 };
 
 module.exports = generateMarkdown;
